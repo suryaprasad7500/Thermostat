@@ -11,9 +11,10 @@ app = web.application(urls, globals())
 
 class test_class:
     def GET(self):
-        return "Test works!"
+        return "No data yet - test_class GET being called"
     def POST(self):
-        return "POST call is served"
+        post_data = web.data()
+        return post_data
 #Definition of test_class which will be called on /test and /
 
 if __name__ == "__main__":
